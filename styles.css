@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.landing {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.full {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.intro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 28px 20px 34px;
+}
+
+.intro img {
+  display: block;
+  width: min(1285px, 100%);
+  height: auto;
+}
+
+.donaciones {
+  width: 100%;
+  padding: 0 20px 44px;
+}
+
+.donation-grid {
+  width: min(1285px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: start;
+  gap: 14px;
+}
+
+.donation-grid a {
+  display: block;
+  line-height: 0;
+}
+
+.donation-grid a:nth-child(1) { grid-column: 1 / span 2; }
+.donation-grid a:nth-child(2) { grid-column: 3 / span 2; }
+.donation-grid a:nth-child(3) { grid-column: 5 / span 2; }
+.donation-grid a:nth-child(4) { grid-column: 2 / span 2; }
+.donation-grid a:nth-child(5) { grid-column: 4 / span 2; }
+.donation-grid a:nth-child(6) { grid-column: 2 / span 2; }
+.donation-grid a:nth-child(7) { grid-column: 4 / span 2; }
+
+.donation-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cta {
+  display: block;
+  width: min(470px, 45%);
+  margin: 38px auto 0;
+  line-height: 0;
+}
+
+.cta img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 0 20px 40px;
+}
+
+.info img {
+  display: block;
+  width: min(1285px, 100%);
+  height: auto;
+}
+
+.info img:nth-child(2) {
+  width: min(1280px, 100%);
+}
+
+.info img:nth-child(3) {
+  width: min(1280px, 100%);
+}
+
+.footer {
+  margin-top: 0;
+}
+
+@media (max-width: 800px) {
+  .intro {
+    padding: 18px 10px 22px;
+  }
+
+  .donaciones {
+    padding: 0 10px 30px;
+  }
+
+  .donation-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .donation-grid a:nth-child(n) {
+    grid-column: auto;
+  }
+
+  .donation-grid a:nth-child(7) {
+    grid-column: 1 / -1;
+    width: 50%;
+    justify-self: center;
+  }
+
+  .cta {
+    width: min(470px, 80%);
+    margin-top: 24px;
+  }
+
+  .info {
+    gap: 16px;
+    padding: 0 10px 24px;
+  }
+}
